@@ -1,0 +1,36 @@
+{
+  "name": "lumx-cli",
+  "version": "0.0.1",
+  "type": "module",
+  "keywords": [
+    "cli",
+    "lumx"
+  ],
+  "scripts": {
+    "start": "npx tsc && npm link && npx create-lumx-dapp"
+  },
+  "bin": {
+    "create-lumx-dapp": "./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^18.6.4",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "cli-progress": "^3.11.2",
+    "cli-spinners": "^2.9.2",
+    "commander": "^10.0.1",
+    "inquirer": "^9.2.15",
+    "ora": "^8.0.1",
+    "typescript": "^4.7.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": ""
+}
