@@ -1,16 +1,33 @@
+import { AnsweredQuestions } from 'src/main';
+
 async function sleep(time: number) {
-  return new Promise((resolve) => setTimeout(resolve, time));
+	return new Promise((resolve) => setTimeout(resolve, time));
 }
 
-function createJson(options: any) {
-  const template = {
-    language: "pt",
-    addons: ["tokengating"],
-  };
+const splitStringAfterSlash = (str: string) => {
+	if (str && str.includes('/')) {
+		return str.split('/')[1];
+	}
 
-  const json = { ...template, ...options };
+	throw new Error('Invalid string');
+};
 
-  return json;
+export type OptionsConfig = Omit<AnsweredQuestions, 'journey'> &
+	typeof template & { clientId: string };
+
+const template = {
+	language: 'pt',
+	addons: ['tokengating'],
+} as const;
+
+function createJson(options: Omit<AnsweredQuestions, 'journey'>) {
+	const json: OptionsConfig = {
+		...template,
+		...options,
+		clientId: splitStringAfterSlash(options.apiKey),
+	};
+
+	return json;
 }
 
 export { sleep, createJson };
