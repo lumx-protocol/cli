@@ -22,7 +22,7 @@
     "@types/node": "^18.6.4",
     "@typescript-eslint/eslint-plugin": "^5.32.0",
     "@typescript-eslint/parser": "^5.32.0",
-    "prettier": "^2.7.1"
+    "prettier": "^3.2.5"
   },
   "dependencies": {
     "chalk": "^5.0.1",
