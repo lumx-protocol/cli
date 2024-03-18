@@ -1,6 +1,6 @@
 {
   "name": "@lumx-protocol/create-dapp",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/index.js",
   "keywords": [
@@ -11,7 +11,8 @@
     "dist"
   ],
   "scripts": {
-    "start": "npx tsc && npm link && npx create-lumx-dapp"
+    "start": "npx tsc && npm link && npx create-lumx-dapp",
+    "release": "changeset publish"
   },
   "bin": {
     "create-lumx-dapp": "./dist/index.js"

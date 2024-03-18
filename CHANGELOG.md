@@ -1,5 +1,11 @@
 # lumx-cli
 
+## 0.0.1
+
+### Patch Changes
+
+- package name change and ci/cd
+
 ## 0.0.2
 
 ### Patch Changes
