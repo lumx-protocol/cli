@@ -26,10 +26,10 @@ export async function main() {
     git clone --quiet https://github.com/Lumx-Protocol/${BOILERPLATE_PATH}
 	mv ${BOILERPLATE_PATH} ${path}
     cd ${path}
-    npm install
     rm lumx.json
     rm yarn.lock
-    rm .github
+    rm -r .github
+    npm install
   `);
 
   const json = createJson(options);
