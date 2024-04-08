@@ -40,7 +40,8 @@ export function main() {
     cd ${path}
     rm lumx.json
     rm yarn.lock
-    rm -r .github
+    rm -r .git
+    git init --quiet
     npm install
   `);
         const json = createJson(options);

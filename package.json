@@ -12,6 +12,7 @@
   ],
   "scripts": {
     "start": "npx tsc && npm link && npx create-lumx-dapp",
+    "build": "npx tsc",
     "release": "changeset publish"
   },
   "bin": {
