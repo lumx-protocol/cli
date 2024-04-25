@@ -30,7 +30,7 @@ import { BOILERPLATE_PATH } from "./helpers/consts.js";
 import { promisifiedRm, promisifiedWriteFile, promifisiedExec, } from "./utils/promises.js";
 export function main() {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log(`Welcome to ${chalk.bold(chalk.bgMagenta("Lumx"))} CLI v${process.env.npm_package_version} 💜\n`);
+        console.log(`Welcome to ${chalk.bold(chalk.bgMagenta("Lumx"))} CLI v0.0.5 💜\n`);
         const selectedOptions = yield inquirer.prompt(questions);
         const pathWithDash = createPathWithDashes(sanitizePath(selectedOptions.pageTitle));
         const spinner = ora("Preparing your project! WAGMI\n").start();
@@ -72,7 +72,7 @@ export function main() {
             console.error("Error creating files: ", err);
         }
         try {
-            yield promifisiedExec(`cd ${pathWithDash} && npm install && git init`);
+            yield promifisiedExec(`cd ${pathWithDash} && npm install && git init -b main`);
             spinner.succeed(`Congratulations! ${chalk.bold(pathWithDash)} has been created with the following options:\n`);
             const { journey, apiKey } = selectedOptions, optionsToShow = __rest(selectedOptions, ["journey", "apiKey"]);
             console.log(optionsToShow);

@@ -20,7 +20,7 @@ import {
 
 export async function main() {
   console.log(
-    `Welcome to ${chalk.bold(chalk.bgMagenta("Lumx"))} CLI v${process.env.npm_package_version} 💜\n`,
+    `Welcome to ${chalk.bold(chalk.bgMagenta("Lumx"))} CLI v0.0.5 💜\n`,
   );
 
   const selectedOptions = await inquirer.prompt<AnsweredQuestions>(questions);
@@ -88,7 +88,7 @@ export async function main() {
 
   try {
     await promifisiedExec(
-      `cd ${pathWithDash} && npm install && git init && git branch -m main`,
+      `cd ${pathWithDash} && npm install && git init -b main`,
     );
     spinner.succeed(
       `Congratulations! ${chalk.bold(pathWithDash)} has been created with the following options:\n`,
