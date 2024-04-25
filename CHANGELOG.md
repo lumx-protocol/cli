@@ -1,5 +1,11 @@
 # lumx-cli
 
+## 0.0.4
+
+### Patch Changes
+
+- Moving to async handling, better visuals and move ids to env
+
 ## 0.0.3
 
 ### Patch Changes
