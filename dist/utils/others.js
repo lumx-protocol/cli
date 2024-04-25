@@ -12,18 +12,12 @@ function sleep(time) {
         return new Promise((resolve) => setTimeout(resolve, time));
     });
 }
-const splitStringAfterSlash = (str) => {
-    if (str && str.includes('/')) {
-        return str.split('/')[1];
-    }
-    throw new Error('Invalid string');
-};
 const template = {
-    language: 'pt',
-    addons: ['tokengating'],
+    language: "pt",
+    addons: ["tokengating"],
 };
 function createJson(options) {
-    const json = Object.assign(Object.assign(Object.assign({}, template), options), { clientId: splitStringAfterSlash(options.apiKey) });
+    const json = Object.assign(Object.assign({}, template), options);
     return json;
 }
 export { sleep, createJson };
